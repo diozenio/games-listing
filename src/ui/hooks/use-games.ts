@@ -1,8 +1,8 @@
-import { PaginationParams } from "@/core/domain/types/pagination";
+import { SearchParams } from "@/core/domain/types/searchParams";
 import { DIContainer } from "@/ui/dicontainer";
 
-export const useFetchGames = (params: PaginationParams) => {
-  return DIContainer.getGameService().fetch(params);
+export const useFetchGames = (searchParams: SearchParams) => {
+  return DIContainer.getGameService().fetch(searchParams);
 };
 
 export const useFetchGameById = (id: string) => {

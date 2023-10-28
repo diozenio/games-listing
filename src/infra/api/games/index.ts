@@ -1,17 +1,18 @@
 import GameAdapter from "@/core/interfaces/adapters/GameAdapter";
 import { BackendClient } from "@/infra/api/client/BackendClient";
-import { PaginationParams } from "@/core/domain/types/pagination";
 import Game from "@/core/domain/models/games/Game";
 import Screenshot from "@/core/domain/models/games/Screenshots";
+import { SearchParams } from "@/core/domain/types/searchParams";
+import Pagination from "@/core/domain/models/Pagination";
 
 class GameAPI extends GameAdapter {
-  async fetch(paginationParams: PaginationParams): Promise<Game[]> {
+  async fetch(searchParams: SearchParams): Promise<Pagination<Game>> {
     const response = await BackendClient.get("/games", {
       params: {
-        ...paginationParams,
+        ...searchParams,
       },
     });
-    return response.data.results.map(Game.fromJSON);
+    return Pagination.fromJSON(response.data, Game.fromJSON);
   }
 
   async fetchById(id: string): Promise<Game> {
@@ -19,13 +20,13 @@ class GameAPI extends GameAdapter {
     return Game.fromJSON(response.data);
   }
 
-  async search(query: string): Promise<Game[]> {
+  async search(query: string): Promise<Pagination<Game>> {
     const response = await BackendClient.get("/games", {
       params: {
         query,
       },
     });
-    return response.data.results.map(Game.fromJSON);
+    return Pagination.fromJSON(response.data, Game.fromJSON);
   }
   async fetchScreenshots(id: string): Promise<Screenshot[]> {
     const response = await BackendClient.get(`/games/${id}/screenshots`);

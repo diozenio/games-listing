@@ -4,6 +4,7 @@ export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
   const page = searchParams.get("page");
   const pageSize = searchParams.get("pageSize");
+  const query = searchParams.get("query");
 
   try {
     const res = await fetch(
@@ -11,6 +12,7 @@ export async function GET(request: Request) {
         new URLSearchParams({
           ...(page && { page }),
           ...(pageSize && { page_size: pageSize }),
+          ...(query && { search: query }),
           dates: "2023-01-01,2023-12-31",
           key: process.env.API_KEY!,
         })

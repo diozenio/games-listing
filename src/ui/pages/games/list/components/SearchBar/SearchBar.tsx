@@ -3,7 +3,7 @@ import { LuSearch } from "react-icons/lu";
 import { Button, Popover, TextField } from "@radix-ui/themes";
 import { useCallback, useState } from "react";
 
-const SearchBar = () => {
+const SearchBar = ({ defaultValue }: { defaultValue: string | undefined }) => {
   const [query, setQuery] = useState("");
 
   const search = useCallback((query: string) => {
@@ -18,6 +18,7 @@ const SearchBar = () => {
       <TextField.Input
         type="search"
         inputMode="search"
+        defaultValue={defaultValue}
         onKeyDown={(e) => {
           if (e.key === "Enter") {
             e.preventDefault();

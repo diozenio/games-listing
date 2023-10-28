@@ -16,7 +16,11 @@ const config: Config = {
         200: "#FFFFFF",
       },
     },
-    extend: {},
+    extend: {
+      backgroundImage: {
+        pageBackground: "url('/pageBackground.svg')",
+      },
+    },
   },
   plugins: [],
   darkMode: "class",

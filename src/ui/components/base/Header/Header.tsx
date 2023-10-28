@@ -15,7 +15,10 @@ const Header = () => {
         <Dropdown />
       </div>
       <div className="hidden md:flex flex-row gap-8 items-center">
-        <Link href={"https://github.com/diozenio/"} target="_blank">
+        <Link
+          href={"https://github.com/diozenio/games-listing"}
+          target="_blank"
+        >
           <LuGithub size={24} />
         </Link>
         <ThemeButton />

@@ -46,11 +46,15 @@ const GameList = async ({ page, pageSize, query }: SearchParams) => {
               <div>
                 <h6 className="mb-2 font-semibold">Genres:</h6>
                 <div className="w-full flex flex-row flex-wrap gap-2">
-                  {game.genres?.map((genre) => (
-                    <Card.Tag key={`${game.id}-genre-${genre.id}`}>
-                      {genre.name}
-                    </Card.Tag>
-                  ))}
+                  {game.genres?.length! > 0 ? (
+                    game.genres?.map((genre) => (
+                      <Card.Tag key={`${game.id}-genre-${genre.id}`}>
+                        {genre.name}
+                      </Card.Tag>
+                    ))
+                  ) : (
+                    <span className="text-gray-400">No genres</span>
+                  )}
                 </div>
               </div>
             </Card.Content>

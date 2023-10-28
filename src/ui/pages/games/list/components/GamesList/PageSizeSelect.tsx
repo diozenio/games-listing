@@ -15,12 +15,11 @@ const PageSizeSelect = ({
     <Select.Root
       defaultValue={pageSize ? String(pageSize) : "12"}
       onValueChange={(value) => {
-        redirect(
+        window.location.href =
           "/" +
-            `?pageSize=${value}` +
-            (page ? `&page=${page}` : "") +
-            (query ? `&query=${query}` : "")
-        );
+          `?pageSize=${value}` +
+          (page ? `&page=${page}` : "") +
+          (query ? `&query=${query}` : "");
       }}
     >
       <Select.Trigger />

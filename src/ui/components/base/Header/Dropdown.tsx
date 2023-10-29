@@ -11,7 +11,7 @@ const Dropdown = () => {
   return (
     <DropdownMenu.Root>
       <DropdownMenu.Trigger>
-        <Button className="rounded-full outline-none hidden">
+        <Button className="rounded-full outline-none">
           <LuAlignJustify
             size={24}
             className="dark:text-dark-200 text-[#1C2024]"

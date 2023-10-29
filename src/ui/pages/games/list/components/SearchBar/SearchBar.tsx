@@ -12,7 +12,7 @@ const SearchBar = ({ defaultValue }: { defaultValue: string | undefined }) => {
 
   return (
     <TextField.Root
-      className="w-full sm:max-w-md mt-6 md:mt-8"
+      className="w-full sm:max-w-md mt-6 md:mt-8  border-dark-800 dark:border-dark-700 dark:bg-dark-800"
       variant="surface"
     >
       <TextField.Input
@@ -29,7 +29,7 @@ const SearchBar = ({ defaultValue }: { defaultValue: string | undefined }) => {
           setQuery(e.currentTarget.value);
         }}
         placeholder="Search a game"
-        className="pl-2 py-6 font-medium border-dark-800 dark:border-dark-700 dark:bg-dark-800"
+        className="pl-2 py-6 font-medium"
       />
       <TextField.Slot className="p-0">
         <Button

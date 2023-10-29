@@ -18,7 +18,7 @@ const config: Config = {
     },
     extend: {
       backgroundImage: {
-        pageBackground: "./public/pageBackground.svg",
+        pageBackground: "url('/pageBackground.svg')",
       },
     },
   },

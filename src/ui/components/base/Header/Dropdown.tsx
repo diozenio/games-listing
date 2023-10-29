@@ -11,7 +11,7 @@ const Dropdown = () => {
   return (
     <DropdownMenu.Root>
       <DropdownMenu.Trigger>
-        <Button className="rounded-full outline-none">
+        <Button className="rounded-full outline-none hidden">
           <LuAlignJustify
             size={24}
             className="dark:text-dark-200 text-[#1C2024]"
@@ -21,7 +21,7 @@ const Dropdown = () => {
       <DropdownMenu.Content>
         <DropdownMenu.Item>
           <Link
-            href="https://github.com/diozenio/"
+            href="https://github.com/diozenio/games-listing"
             target="_blank"
             className="flex flex-row items-center gap-2 text-lg"
           >

@@ -18,11 +18,11 @@ const config: Config = {
     },
     extend: {
       backgroundImage: {
-        pageBackground: "url('/pageBackground.svg')",
+        pageBackground: "./public/pageBackground.svg",
       },
     },
   },
   plugins: [],
-  darkMode: "class",
+  darkMode: ["class", '[data-mode="dark"]'],
 };
 export default config;

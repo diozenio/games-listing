@@ -45,7 +45,7 @@ To run GameWaves locally on your machine, follow these steps:
 1. Navigate to the project directory using the terminal:
 
    ```bash
-   cd game-listing
+   cd games-listing
    ```
 
 2. Install the project dependencies by running:
@@ -53,6 +53,18 @@ To run GameWaves locally on your machine, follow these steps:
    ```bash
    npm install
    ```
+
+# Setting Up .env.local
+
+To configure your project, you'll need to create a `.env.local` file. You can use the `.env.local.example` file as a template. This file contains environment variables required for your application.
+
+## Example .env.local
+
+| Variable Name          | Description                                       | Example Value           |
+| ---------------------- | ------------------------------------------------- | ----------------------- |
+| API_URL                | The URL for the API you're connecting to.         | https://api.rawg.io/api |
+| API_KEY                | Your API key to access the API.                   | your_api_key            |
+| NEXT_PUBLIC_VERCEL_URL | The URL for the Vercel site or for local testing. | http://localhost:3000/  |
 
 ### Start the Application
 

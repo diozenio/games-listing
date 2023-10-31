@@ -11,7 +11,7 @@ const AdditionsList = async ({ gameID }: AdditionsListProps) => {
   return (
     <div className="w-full flex flex-col items-center md:items-start gap-10 mt-12">
       <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold">Game DLCs</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
         {!additions || additions.length === 0 ? (
           <p className="text-lg text-dark-500">
             {"This game doesn't have DLC's"}

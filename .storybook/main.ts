@@ -41,12 +41,6 @@ const config: StorybookConfig = {
   ],
   webpackFinal: async (config: any) => {
     config.resolve.alias["@"] = path.resolve(__dirname, "../src");
-    config.resolve.alias["@/pages"] = path.resolve(__dirname, "../src/pages");
-    config.resolve.alias["@/components"] = path.resolve(
-      __dirname,
-      "../src/components"
-    );
-
     return config;
   },
   framework: {

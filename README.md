@@ -54,11 +54,11 @@ To run GameWaves locally on your machine, follow these steps:
    npm install
    ```
 
-# Setting Up .env.local
+### Setting Up `.env.local`
 
 To configure your project, you'll need to create a `.env.local` file. You can use the `.env.local.example` file as a template. This file contains environment variables required for your application.
 
-## Example .env.local
+### Example .env.local
 
 | Variable Name          | Description                                       | Example Value           |
 | ---------------------- | ------------------------------------------------- | ----------------------- |
@@ -75,6 +75,14 @@ To configure your project, you'll need to create a `.env.local` file. You can us
    ```
 
 2. The application should now be running locally. Open your web browser and visit [http://localhost:3000](http://localhost:3000) to access GameWaves.
+
+### Run Storybook
+
+1. To launch Storybook, use the following command in your project directory:
+
+   ```bash
+   npm run storybook
+   ```
 
 ## 💻 Technologies Used
 

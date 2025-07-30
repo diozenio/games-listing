@@ -1,7 +1,5 @@
 # GameWaves
 
-![GameWaves Banner](./docs/GameWavesCover.png)
-
 GameWaves is designed to provide users with an easy-to-navigate platform to discover and learn more about the top-rated games of 2023. The website features a user-friendly interface with the following key functionalities:
 
 - A list of the best-rated games of the year.
